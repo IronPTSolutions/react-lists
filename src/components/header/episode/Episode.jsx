@@ -1,5 +1,5 @@
 function Episode(props) {
-  const { episode } = props
+  const { episode, deleteEpisode } = props
 
   return (
     <div className="Episode card">
@@ -17,6 +17,11 @@ function Episode(props) {
         <p className="card-text">
           {episode.summary}
         </p>
+
+        <button
+          className="btn btn-danger"
+          onClick={() => deleteEpisode(episode.id)}
+        >Delete</button>
       </div>
     </div>
   )
